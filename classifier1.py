@@ -35,7 +35,7 @@ def get_tiny_images(image_paths):
         # Create feature vector
         feature_vector = image_np.flatten()
         
-        # Normalise feature vector to zero mean and unit variance
+        # Normalise feature vector to zero mean and unit length
         zero_meaned_feature_vector = feature_vector - np.mean(feature_vector)
         vector_norm = np.linalg.norm(zero_meaned_feature_vector)
         if vector_norm > 0:
